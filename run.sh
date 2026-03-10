@@ -1,8 +1,18 @@
 #!/usr/bin/env bash
-set -euo pipefail
+set -e
 
-# Reproduce the figure for task #3: 1d-multi-method-data.csv
-# Assumes dependencies are installed (e.g., via `uv sync` or equivalent).
+mkdir -p figs workflow/processed
 
-python workflow/format_1d_multi_method.py
-python workflow/viz_1d_multi_method.py
+run_py () {
+  if command -v uv >/dev/null 2>&1; then
+    uv run python "$@"
+  elif command -v python3 >/dev/null 2>&1; then
+    python3 "$@"
+  else
+    python "$@"
+  fi
+}
+
+# Dataset 3: 1d-multi-method
+run_py workflow/format_1d_multi_method.py
+run_py workflow/viz_1d_multi_method.py
