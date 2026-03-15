@@ -14,3 +14,11 @@ run_py () {
 # Dataset 3: 1d-multi-method
 run_py workflow/format_1d_multi_method.py
 run_py workflow/viz_1d_multi_method.py
+
+# Dataset 2: 2d-data
+run_py workflow/format_2d_data.py
+run_py workflow/viz_2d_data.py
+
+# Dataset 1: 1d-data
+run_py workflow/format_1d_data.py
+run_py workflow/viz_1d_data.py
