@@ -1,0 +1,4 @@
+﻿This program reads a CSV file containing 2D data points and visualizes them using a scatter plot. Because the dataset consists of paired x and y coordinates, a scatter plot is the best choice for showing the relationship between the two variables. The script also calculates a line of best fit using NumPy’s polyfit() function and overlays it on the graph to show the general linear trend in the data.
+
+
+The data is loaded with pandas, plotted using matplotlib, and saved as fig-2d-data.png in the figs folder. The plot includes labeled axes, a title, and adjusted transparency to make overlapping points easier to see. Overall, this project provides a simple visual analysis of the dataset and helps reveal any correlation between x and y.
